@@ -1,0 +1,35 @@
+﻿<Window x:Class="ForzarCierre.AñadirProgramas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ForzarCierre"
+        mc:Ignorable="d"
+        Title="Añadir Programas" Height="323.12" Width="536.09">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="255*"/>
+        </Grid.RowDefinitions>
+        <Viewbox>
+            <TextBlock Text="Programas Añadidos"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1">
+            <TextBlock Text="Programas Abiertos"/>
+        </Viewbox>
+        <ListBox x:Name="lstProgramasAñadidos" Grid.Row="1" MouseDoubleClick="lstProgramasAñadidos_MouseDoubleClick"/>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="224*"/>
+                <RowDefinition Height="31*"/>
+            </Grid.RowDefinitions>
+            <ListBox x:Name="lstProgramasAbiertos" MouseDoubleClick="lstProgramasAbiertos_MouseDoubleClick"/>
+            <Button x:Name="btnActualizarLista" Grid.Row="1" Content="Actualizar Lista" Click="btnActualizarLista_Click" />
+        </Grid>
+    </Grid>
+</Window>
